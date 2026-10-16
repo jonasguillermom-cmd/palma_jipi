@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOMBREROS DE JIPIJAPA · ÁLVARO OBREGÓN, TENOSIQUE</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- ===== HEADER (antes includes/header.php) ===== -->
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#inicio">Jipi<span>Obregón</span></a>
+    <nav>
+      <a href="#tienda">Tienda</a>
+      <a href="#descubre">Descubre</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#rescate">Centro de rescate</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== CARRUSEL (cambia las fotos en imagen/inicio/) ===== -->
+<div class="hero" id="inicio">
+  <div class="hero-slide active">
+    <img src="imagen/inicio/carrusel1.jpg" alt="Sombreros de palma jipijapa">
+    <div class="hero-caption"><h1>Sombreros de palma jipijapa<br>tejidos a mano</h1><a href="#tienda" class="btn">Ver sombreros</a></div>
+  </div>
+  <div class="hero-slide">
+    <img src="imagen/inicio/carrusel2.jpg" alt="Artesana tejiendo">
+    <div class="hero-caption"><h1>Una tradición que vive<br>en Álvaro Obregón</h1><a href="#descubre" class="btn">Descubre la cultura</a></div>
+  </div>
+  <div class="hero-slide">
+    <img src="imagen/inicio/carrusel3.jpg" alt="Centro de rescate">
+    <div class="hero-caption"><h1>Cada compra ayuda a<br>rescatar el oficio</h1><a href="#rescate" class="btn">Conoce el centro</a></div>
+  </div>
+  <button class="hero-arrow prev" onclick="changeSlide(-1)" aria-label="Anterior">&#8592;</button>
+  <button class="hero-arrow next" onclick="changeSlide(1)" aria-label="Siguiente">&#8594;</button>
+  <div class="hero-nav">
+    <button class="hero-dot active" onclick="goSlide(0)"></button>
+    <button class="hero-dot" onclick="goSlide(1)"></button>
+    <button class="hero-dot" onclick="goSlide(2)"></button>
+  </div>
+</div>
+
+<!-- ===== LO MÁS VENDIDO ===== -->
+<section class="section blanco" id="tienda"><div class="container">
+  <div class="center"><img src="imagen/logo_centro.png" alt="Logo" class="logo-centro"></div>
+  <h2 class="section-title">¡LO MÁS VENDIDO!</h2>
+  <div class="prod-grid" id="grid-top"></div>
+  <div class="ver-todos-wrap"><a href="#contacto" class="ver-todos">¿Buscas otro modelo? Escríbenos</a></div>
+</div></section>
+
+<!-- ===== DESCUBRE ===== -->
+<section class="section claro" id="descubre"><div class="container">
+  <h2 class="section-title">DESCUBRE</h2>
+  <div class="coll-grid">
+    <a href="#nosotros" class="coll-card"><img src="imagen/descubre-palma.jpg" alt="La palma jipijapa"><div class="coll-label">La palma jipijapa</div></a>
+    <a href="#proceso" class="coll-card"><img src="imagen/descubre-proceso.jpg" alt="Del monte al sombrero"><div class="coll-label">Del monte al sombrero</div></a>
+    <a href="#rescate" class="coll-card"><img src="imagen/descubre-rescate.jpg" alt="Centro de rescate"><div class="coll-label">Centro de rescate cultural</div></a>
+  </div>
+</div></section>
+
+<!-- ===== OTROS PRODUCTOS ===== -->
+<section class="section blanco"><div class="container">
+  <h2 class="section-title left">Otros Productos</h2>
+  <div class="prod-grid" id="grid-otros"></div>
+</div></section>
+
+<!-- ===== NOSOTROS ===== -->
+<div class="about-strip" id="nosotros"><div class="about-inner">
+  <div class="about-text">
+    <h2>Los sombreros de jipi de Álvaro Obregón se tejen a mano en Tenosique, Tabasco.</h2>
+    <p>Somos un grupo de artesanas y artesanos tenosiquenses dedicados al tejido de la palma jipijapa, un oficio heredado de generación en generación y que forma parte de la identidad de nuestra comunidad.</p>
+    <p>Cada sombrero es una pieza única: de la palma al telar, del telar a tu cabeza, cuidando cada paso del proceso.</p>
+    <a href="#rescate" class="btn-link">¡Conoce nuestro centro de rescate!</a>
+  </div>
+  <div>
+    <p class="about-p">Somos parte de una cadena artesanal que empieza en la cosecha de la palma, pasa por el secado, el tejido y el acabado, y termina en la puerta de tu casa o negocio.</p>
+    <div class="icon-cats">
+      <div class="icon-cat"><img src="imagen/icono-finos.png" alt=""><span>Sombreros finos</span></div>
+      <div class="icon-cat"><img src="imagen/icono-campesinos.png" alt=""><span>Sombreros campesinos</span></div>
+      <div class="icon-cat"><img src="imagen/icono-accesorios.png" alt=""><span>Accesorios de palma</span></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- ===== PROCESO ===== -->
+<section class="section claro" id="proceso"><div class="container">
+  <h2 class="section-title">DEL MONTE AL SOMBRERO</h2>
+  <div class="steps">
+    <div class="step"><b>01</b><h3>Cosecha</h3><p>Se selecciona y corta la palma tierna respetando el ciclo de la planta.</p></div>
+    <div class="step"><b>02</b><h3>Preparación</h3><p>La hoja se deshebra, se cuece y se seca al sol hasta lograr la fibra flexible.</p></div>
+    <div class="step"><b>03</b><h3>Tejido</h3><p>Se teje la copa y el ala con técnicas heredadas de nuestras abuelas.</p></div>
+    <div class="step"><b>04</b><h3>Acabado</h3><p>Se forma en horma, se remata y se da el toque final a cada pieza.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== CENTRO DE RESCATE ===== -->
+<div class="about-strip blanco" id="rescate"><div class="about-inner">
+  <div class="about-text">
+    <h2>Centro de rescate de la cultura de la palma jipijapa</h2>
+    <p>Queremos que el oficio no se pierda. Por eso impartimos talleres de tejido, documentamos las historias de las maestras artesanas y promovemos el cuidado de la palma desde los primeros años.</p>
+    <p>Parte de lo que se vende en esta tienda apoya el funcionamiento del centro.</p>
+    <a href="#contacto" class="btn-link">¿Quieres llevar un taller a tu escuela o visitarnos?</a>
+  </div>
+  <div class="about-imgs"><img src="imagen/centro-rescate.jpg" alt="Centro de rescate"></div>
+</div></div>
+
+<!-- ===== CONTACTO ===== -->
+<section class="section claro" id="contacto"><div class="container center">
+  <h2 class="section-title">CONTACTO</h2>
+  <p>📍 Álvaro Obregón, Tenosique, Tabasco, México</p>
+  <p>📱 WhatsApp: <a href="https://wa.me/520000000000" target="_blank" rel="noopener">+52 000 000 0000</a></p>
+  <p>✉️ contacto@tudominio.com</p>
+  <p>Envíos a todo México. Pedidos especiales y mayoreo bajo pedido.</p>
+</div></section>
+
+<!-- ===== FOOTER (antes includes/footer.php) ===== -->
+<footer class="footer"><div class="container center">
+  <strong>Jipi Obregón</strong> · Sombreros de palma jipijapa y centro de rescate cultural<br>
+  Álvaro Obregón, Tenosique, Tabasco · © 2026
+</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

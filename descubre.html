@@ -8,16 +8,30 @@
 </head>
 <body>
 
-<header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="index.html">Jipi<span>Obregón</span></a>
-    <nav>
-      <a href="index.html#tienda">Tienda</a>
-      <a href="descubre.html" class="activo">Descubre</a>
-      <a href="index.html#nosotros">Nosotros</a>
-      <a href="index.html#contacto">Contacto</a>
-    </nav>
-  </div>
+<div class="top-strip"></div>
+<header class="site-header">
+  <div class="header-main"><div class="container hm">
+    <div class="hm-left">
+      <img class="logo-inst" src="imagen/logo_conanp.png" alt="CONANP">
+      <img class="logo-inst" src="imagen/logo_canon_usumacinta.png" alt="Cañón del Usumacinta">
+      <a class="brandbox" href="index.html"><img class="brand-mark" src="imagen/logo_centro.png" alt=""><span class="brand-text"><b>JIPI OBREGÓN</b><small>SOMBREROS DE PALMA JIPIJAPA</small></span></a>
+    </div>
+    <div class="hm-right">
+      <button class="hact" id="btn-buscar" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>Buscar</span></button>
+      <a class="hact" href="contacto.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Ingresar</span></a>
+      <button class="hact" id="btn-carrito" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.5 11h11L21 7H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg><span>Carrito</span><em class="badge" id="count">0</em></button>
+    </div>
+  </div></div>
+  <form class="searchbar" id="searchbar" hidden><div class="container"><input id="q" type="search" placeholder="Buscar sombreros..."><button class="btn small" type="submit">Buscar</button></div></form>
+  <nav class="mainnav"><ul>
+<li><a href="index.html">INICIO</a></li>
+<li><a href="index.html#nosotros">NOSOTROS</a></li>
+<li class="has-sub"><a href="index.html#tienda">PRODUCTOS <small>▾</small></a><ul class="sub"><li><a href="index.html#tienda">Todos los productos</a></li><li><a href="index.html?cat=Finos#tienda">Sombreros finos</a></li><li><a href="index.html?cat=Campesinos#tienda">Sombreros campesinos</a></li><li><a href="index.html?cat=Cl%C3%A1sicos#tienda">Sombreros clásicos</a></li><li><a href="index.html?cat=Accesorios#tienda">Accesorios de palma</a></li></ul></li>
+<li><a href="descubre.html#palma">LA PALMA</a></li>
+<li><a href="descubre.html" class="activo">DESCUBRE</a></li>
+<li><a href="blog.html">BLOG Y EVENTOS</a></li>
+<li><a href="contacto.html">CONTACTO</a></li>
+</ul></nav>
 </header>
 
 <div class="page-hero">
@@ -95,7 +109,7 @@
     <div class="card"><h3>Visítanos</h3><p>Conoce el proceso y convive con las familias artesanas de Álvaro Obregón.</p></div>
     <div class="card"><h3>Lleva un taller</h3><p>Invítanos a tu escuela o grupo para compartir la cultura de la palma.</p></div>
   </div>
-  <p class="center" style="margin-top:28px"><a class="btn" href="index.html#contacto">Contáctanos</a></p>
+  <p class="center" style="margin-top:28px"><a class="btn" href="contacto.html">Contáctanos</a></p>
 </div></section>
 
 <footer class="footer"><div class="container center">
@@ -103,10 +117,16 @@
   Álvaro Obregón, Tenosique, Tabasco · © 2026
 </div></footer>
 
-<script>
-document.querySelectorAll("img").forEach(function(im){
-  im.addEventListener("error", function(){ im.style.visibility = "hidden"; });
-});
-</script>
+
+<aside id="drawer" aria-label="Carrito">
+  <button class="close" id="close" aria-label="Cerrar">×</button>
+  <h3>Tu pedido</h3>
+  <div id="items"></div>
+  <div class="total"><span>Total</span><span id="total">$0 MXN</span></div>
+  <a class="btn" id="checkout" href="#" target="_blank" rel="noopener" style="text-align:center">Pedir por WhatsApp</a>
+</aside>
+<div id="overlay"></div>
+<a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><circle cx="8" cy="10.5" r="1.3" fill="#25a85a"/><circle cx="12" cy="10.5" r="1.3" fill="#25a85a"/><circle cx="16" cy="10.5" r="1.3" fill="#25a85a"/></svg></a>
+<script src="script.js"></script>
 </body>
 </html>

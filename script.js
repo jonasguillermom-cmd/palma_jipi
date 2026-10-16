@@ -5,27 +5,19 @@ var WHATSAPP = "529341105505"; // WhatsApp de ventas: lada país + número, sin 
    t: tipo (sombrero | accesorio) · cat: categoría · p: precio (null = cotizar) · old: precio anterior
    feat: sale en el inicio · rel: sale como relacionado en cubanos.html · f: filtro de accesorios */
 var PRODUCTS = [
-  {id:"s1", t:"sombrero", cat:"Cubanos",  n:"Sombrero Cubano Artesanal", d:"Paja jipi natural tejida a mano. Tallas S, M, L y XL.", p:null, img:"sombrero_cubano.jpeg", href:"cubanos.html"},
-  {id:"s2", t:"sombrero", cat:"Otros",    n:"Sombrero Clásico Natural",  d:"Tejido tradicional en color natural.",       p:1200, img:"clasico-natural.jpg", feat:1},
-  {id:"s3", t:"sombrero", cat:"Vaqueros", n:"Texana Premium Negro",      d:"Texana de acabado premium en negro.",        p:2100, old:2800, img:"texana-premium-negro.jpg", feat:1},
-  {id:"s4", t:"sombrero", cat:"Vaqueros", n:"Sombrero Vaquero Café",     d:"Vaquero en tono café, ala ancha.",           p:3500, img:"vaquero-cafe.jpg", feat:1},
-  {id:"s5", t:"sombrero", cat:"Vaqueros", n:"Texana Estilo Rancher",     d:"Estilo rancher con mucho carácter.",         p:3200, img:"texana-rancher.jpg", badge:"Nuevo", feat:1},
-  {id:"s6", t:"sombrero", cat:"Vaqueros", n:"Sombrero Vaquero",          d:"Vaquero clásico para uso diario.",           p:1500, img:"vaquero.jpg", rel:1},
-  {id:"s7", t:"sombrero", cat:"Otros",    n:"Sombrero Panamá",           d:"Elegante, fresco y ligero.",                 p:1350, img:"panama.jpg", rel:1},
-  {id:"s8", t:"sombrero", cat:"Otros",    n:"Sombrero Fedora",           d:"Estilo fedora tejido a mano.",               p:1100, img:"fedora.jpg", rel:1},
-  {id:"s9", t:"sombrero", cat:"Otros",    n:"Sombrero Casual",           d:"Cómodo y versátil para el día a día.",       p:950,  img:"casual.jpg", rel:1},
-  {id:"a1", t:"accesorio", f:"aretes",     n:"Aretes Mariposa",            d:"Aretes artesanales de palma jipijapa en forma de mariposa. Disponible en rosado.", p:150, img:"aretemariposa.png", badge:"Popular"},
+  {id:"s1", t:"sombrero", cat:"Cubanos",  n:"Sombrero Cubano Artesanal", d:"Paja jipi natural tejida a mano. Tallas S, M, L y XL.", p:null, img:"sombrero_cubano.jpeg", href:"cubanos.html", feat:1},
+  {id:"a1", t:"accesorio", f:"aretes",     n:"Aretes Mariposa",            d:"Aretes artesanales de palma jipijapa en forma de mariposa. Disponible en rosado.", p:150, img:"aretemariposa.png", badge:"Popular", rel:1, feat:1},
   {id:"a2", t:"accesorio", f:"aretes",     n:"Aretes color verde",         d:"Diseño floral en tonos verdes suaves y naturales.", p:150, img:"areteverdeydorado.png"},
   {id:"a3", t:"accesorio", f:"aretes",     n:"Aretes espiral morado",      d:"Diseño circular en espiral con fibras tejidas en tonos morados. Ligeros y elegantes.", p:150, img:"arete2.png"},
   {id:"a4", t:"accesorio", f:"aretes",     n:"Aretes Flor Negro y Natural",d:"Tejidos a mano con diseño floral en tonos negro y natural.", p:150, img:"arete3.png"},
   {id:"a5", t:"accesorio", f:"aretes",     n:"Aretes Estrella con Flecos", d:"Estrella azul con flecos de colores: movimiento y frescura.", p:150, img:"arete4.png"},
-  {id:"a6", t:"accesorio", f:"llaveros",   n:"Llavero circular",           d:"Tejido a mano con palma jipijapa. Ligero y versátil.", p:175, img:"llavero1.png"},
-  {id:"a7", t:"accesorio", f:"alajeros",   n:"Alajero artesanal",          d:"Caja circular tejida a mano, de colores vibrantes y patrones geométricos. Ideal para joyería.", p:200, img:"alajero1.png"},
-  {id:"a8", t:"accesorio", f:"tortilleros",n:"Tortillero Artesanal",       d:"Tejido tradicional multicolor. Conserva las tortillas calientes.", p:250, img:"tortillero1.png", badge:"Popular"},
+  {id:"a6", t:"accesorio", f:"llaveros",   n:"Llavero circular",           d:"Tejido a mano con palma jipijapa. Ligero y versátil.", p:175, img:"llavero1.png", rel:1},
+  {id:"a7", t:"accesorio", f:"alajeros",   n:"Alajero artesanal",          d:"Caja circular tejida a mano, de colores vibrantes y patrones geométricos. Ideal para joyería.", p:200, img:"alajero1.png", rel:1, feat:1},
+  {id:"a8", t:"accesorio", f:"tortilleros",n:"Tortillero Artesanal",       d:"Tejido tradicional multicolor. Conserva las tortillas calientes.", p:250, img:"tortillero1.png", badge:"Popular", rel:1, feat:1},
   {id:"a9", t:"accesorio", f:"llaveros",   n:"Llavero en forma de sandía", d:"Llavero artesanal tejido a mano con forma de sandía.", p:150, img:"llavero2.png"},
   {id:"a10",t:"accesorio", f:"alajeros",   n:"Caja Artesanal Multicolor",  d:"Caja tejida a mano con fibras naturales y tejido tradicional.", p:200, img:"alajero2.png"}
 ];
-var SOMB_CATS = ["Todos","Cubanos","Vaqueros","Niños","Damas","Otros"];
+var SOMB_CATS = ["Todos"].concat(PRODUCTS.filter(function(x){ return x.t==="sombrero"; }).map(function(x){ return x.cat; }).filter(function(c,i,a){ return a.indexOf(c)===i; }));
 var ACC_FILTERS = [["todos","Todos"],["aretes","Aretes"],["llaveros","Llaveros"],["alajeros","Alajeros"],["tortilleros","Tortilleros"]];
 var ALIAS = {fundas:"alajeros", regalo:"tortilleros"};
 
@@ -37,7 +29,9 @@ document.querySelectorAll("[data-wa]").forEach(function(a){ if(!a.getAttribute("
 /* ===== TARJETAS ===== */
 function tarjeta(x){
   var precio = x.p == null ? '<div class="precio">Cotiza tu talla</div>' : '<div class="precio">' + (x.old ? '<s>'+money(x.old)+'</s> ' : '') + money(x.p) + '</div>';
-  var btn = x.p == null
+  var btn = x.href
+    ? '<a class="btn small" href="'+x.href+'">Ver producto</a>'
+    : x.p == null
     ? '<a class="btn small" target="_blank" rel="noopener" href="'+wa("Hola, quiero cotizar: "+x.n)+'">Cotizar por WhatsApp</a>'
     : '<button class="btn small" type="button" data-add="'+x.id+'">Agregar al carrito</button>';
   var foto = '<div class="foto">' + (x.badge ? '<span class="tag">'+x.badge+'</span>' : '') + '<img src="'+x.img+'" alt="'+x.n+'"></div>';
@@ -63,6 +57,7 @@ if(document.querySelector('[data-grid="sombreros"]')){
   document.querySelectorAll('[data-chips="sombreros"] a').forEach(function(a){ a.href = a.href.replace(/cat=(.*)$/, function(m,v){ return "cat="+v; }); });
   pinta("sombreros", lista);
   if(!lista.length) $("vacio").hidden = false;
+  $("contador-s").textContent = "Mostrando " + lista.length + (lista.length===1 ? " producto" : " productos");
 }
 if(document.querySelector('[data-grid="accesorios"]')){
   var fil = (params.get("filtro")||"todos").toLowerCase(); fil = ALIAS[fil] || fil;

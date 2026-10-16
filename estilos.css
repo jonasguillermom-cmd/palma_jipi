@@ -11,7 +11,7 @@
   --texto-suave:#6b654f;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth;scroll-padding-top:10px}
 body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--paja);color:var(--texto);line-height:1.6}
 a{color:var(--terracota)}
 img{max-width:100%;display:block}
@@ -28,17 +28,8 @@ h1,h2,h3{font-family:"Palatino Linotype",Palatino,Georgia,serif;line-height:1.2}
 .btn.small{padding:9px 16px;font-size:13px;margin-top:10px;background:var(--verde);color:var(--blanco)}
 .btn.small:hover{background:var(--terracota)}
 
-/* Header */
-.topbar{position:sticky;top:0;z-index:50;background:var(--verde)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:62px}
-.brand{font:700 21px Palatino,Georgia,serif;color:var(--blanco);text-decoration:none}
-.brand span{color:var(--ocre)}
-.nav nav{display:flex;gap:18px;overflow-x:auto}
-.nav nav a{color:var(--paja);text-decoration:none;font:500 14px system-ui,sans-serif;white-space:nowrap}
-.nav nav a:hover{color:var(--ocre)}
-
 /* Hero */
-.hero{position:relative;height:clamp(320px,56vw,560px);overflow:hidden;background:var(--verde)}
+.hero{position:relative;aspect-ratio:1366/465;min-height:230px;overflow:hidden;background:var(--verde)}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s}
 .hero-slide.active{opacity:1;z-index:1}
 .hero-slide img{width:100%;height:100%;object-fit:cover}
@@ -96,7 +87,6 @@ h1,h2,h3{font-family:"Palatino Linotype",Palatino,Georgia,serif;line-height:1.2}
 .footer strong{color:var(--ocre)}
 
 /* ===== Página Descubre ===== */
-.nav nav a.activo{color:var(--ocre)}
 .page-hero{position:relative;background:var(--verde);color:var(--blanco);padding:70px 0 60px;overflow:hidden}
 .page-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
 .page-hero .container{position:relative}
@@ -115,3 +105,74 @@ h1,h2,h3{font-family:"Palatino Linotype",Palatino,Georgia,serif;line-height:1.2}
 .foto-banda{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:28px}
 .foto-banda img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:var(--paja-oscuro)}
 .volver{display:inline-block;margin-bottom:18px;color:var(--ocre);font:600 14px system-ui,sans-serif;text-decoration:none}
+
+/* ===== Contacto y logos institucionales ===== */
+.contacto-grid{display:grid;gap:36px}
+@media(min-width:850px){.contacto-grid{grid-template-columns:1fr 1.3fr}}
+.card p{margin:0 0 14px;color:var(--texto);font-size:15px}
+.mapa{border-radius:16px;overflow:hidden;border:1px solid var(--paja-oscuro);margin-bottom:12px;background:var(--paja-oscuro)}
+.mapa iframe{display:block;width:100%;height:400px;border:0}
+.aliados{background:#fff;padding:36px 0;border-top:1px solid var(--paja-oscuro)}
+.aliados-t{margin:0 0 16px;font:600 12px system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--texto-suave)}
+.aliados-logos{display:flex;gap:40px;justify-content:center;align-items:center;flex-wrap:wrap}
+.aliados-logos img{height:110px;width:auto;object-fit:contain}
+
+/* ===== Header nuevo (estructura Central Apícola) ===== */
+.top-strip{height:14px;background:#1c2e1b}
+.header-main{background:#fff;border-bottom:1px solid var(--paja-oscuro)}
+.hm{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;flex-wrap:wrap}
+.hm-left{display:flex;align-items:center;gap:14px}
+.logo-inst{height:66px;width:auto;object-fit:contain}
+.brandbox{display:flex;align-items:center;gap:10px;text-decoration:none;margin-left:6px}
+.brand-mark{height:56px;width:auto;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text b{font:700 21px Palatino,Georgia,serif;color:var(--texto);letter-spacing:.02em}
+.brand-text small{font:600 11px system-ui,sans-serif;letter-spacing:.12em;color:var(--ocre);margin-top:3px}
+.hm-right{display:flex;align-items:center;gap:22px}
+.hact{display:inline-flex;align-items:center;gap:7px;background:none;border:0;cursor:pointer;color:var(--texto);font:500 14px system-ui,sans-serif;text-decoration:none;padding:6px 0}
+.hact:hover{color:var(--terracota)}
+.badge{font-style:normal;background:var(--ocre);color:#fff;border-radius:999px;min-width:20px;height:20px;line-height:20px;text-align:center;font-size:12px;font-weight:700}
+.searchbar{background:var(--paja);border-bottom:1px solid var(--paja-oscuro);padding:12px 0}
+.searchbar[hidden]{display:none}
+.searchbar .container{display:flex;gap:10px}
+.searchbar input{flex:1;padding:10px 14px;border:1px solid var(--paja-oscuro);border-radius:999px;font:15px system-ui,sans-serif;background:#fff}
+.searchbar .btn.small{margin-top:0}
+.mainnav{background:var(--verde);border-bottom:3px solid var(--ocre)}
+.mainnav ul{list-style:none;margin:0 auto;padding:0;max-width:1100px;display:flex;justify-content:center}
+.mainnav>ul>li{position:relative;flex:1;text-align:center;border-left:1px solid rgba(200,146,58,.55)}
+.mainnav>ul>li:first-child{border-left:0}
+.mainnav a{display:block;padding:15px 8px;color:var(--blanco);text-decoration:none;font:700 12px system-ui,sans-serif;letter-spacing:.08em;white-space:nowrap}
+.mainnav a:hover,.mainnav a.activo{color:var(--ocre)}
+.mainnav small{font-size:9px}
+.mainnav .sub{display:none;flex-direction:column;margin:0;padding:0;max-width:none;position:absolute;top:100%;left:0;min-width:220px;background:var(--verde);border-top:2px solid var(--ocre);z-index:60;text-align:left}
+.sub a{padding:12px 16px;letter-spacing:.04em;font-weight:600;border-top:1px solid rgba(255,255,255,.1)}
+.mainnav .has-sub:hover .sub{display:flex}
+@media(max-width:850px){
+  .mainnav ul{justify-content:flex-start;overflow-x:auto}
+  .mainnav>ul>li{flex:0 0 auto}
+  .mainnav .sub{display:none!important}
+  .logo-inst{height:46px}.brand-mark{height:42px}.brand-text b{font-size:16px}.hm-right{gap:14px}.hact span{display:none}.hact.cart span{display:inline}
+}
+
+/* Carrito y botón flotante */
+.hero-arrow{background:rgba(255,255,255,.7)}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:90;display:none}
+#overlay.on{display:block}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--blanco);border-left:1px solid var(--paja-oscuro);z-index:100;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:18px}
+#drawer.open{transform:none}
+#items{flex:1;overflow:auto;font:15px system-ui,sans-serif}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--paja-oscuro)}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--paja-oscuro);background:transparent;cursor:pointer}
+.total{display:flex;justify-content:space-between;font:700 18px system-ui,sans-serif;padding:14px 0}
+.close{align-self:flex-end;background:none;border:0;font-size:28px;cursor:pointer;color:var(--texto)}
+.wa-float{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#25a85a;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:80}
+button.btn{border:0;cursor:pointer}
+
+/* Ajustes móvil */
+html,body{overflow-x:hidden}
+@media(max-width:850px){
+  .hm{min-height:0;padding-top:8px;padding-bottom:8px}
+  .hm-left{flex-wrap:wrap;gap:8px}
+  .brandbox{margin-left:0}
+  .brand-text small{font-size:9px;letter-spacing:.06em}
+}

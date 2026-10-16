@@ -3,131 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SOMBREROS DE JIPIJAPA · ÁLVARO OBREGÓN, TENOSIQUE</title>
+<title>Jipijapa Ancestral — Sombreros de palma jipijapa hechos a mano</title>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
-<!-- ===== HEADER (antes includes/header.php) ===== -->
 <div class="top-strip"></div>
 <header class="site-header">
   <div class="header-main"><div class="container hm">
     <div class="hm-left">
       <img class="logo-inst" src="logo_conanp.png" alt="CONANP">
       <img class="logo-inst" src="logo_canon_usumacinta.png" alt="Cañón del Usumacinta">
-      <a class="brandbox" href="index.html"><img class="brand-mark" src="logo_centro.png" alt=""><span class="brand-text"><b>JIPI OBREGÓN</b><small>SOMBREROS DE PALMA JIPIJAPA</small></span></a>
+      <a class="brandbox" href="index.html"><img class="brand-mark" src="logo.png" alt=""><span class="brand-text"><b>JIPIJAPA ANCESTRAL</b><small>SOMBREROS DE PALMA JIPIJAPA</small></span></a>
     </div>
     <div class="hm-right">
       <button class="hact" id="btn-buscar" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>Buscar</span></button>
-      <a class="hact" href="contacto.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Ingresar</span></a>
+      <a class="hact" href="contactos.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Ingresar</span></a>
       <button class="hact" id="btn-carrito" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.5 11h11L21 7H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg><span>Carrito</span><em class="badge" id="count">0</em></button>
+      <button class="hact menu-btn" id="btn-menu" type="button" aria-label="Menú">☰</button>
     </div>
   </div></div>
-  <form class="searchbar" id="searchbar" hidden><div class="container"><input id="q" type="search" placeholder="Buscar sombreros..."><button class="btn small" type="submit">Buscar</button></div></form>
-  <nav class="mainnav"><ul>
+  <form class="searchbar" id="searchbar" hidden><div class="container"><input id="q" type="search" placeholder="Buscar sombreros y accesorios..."><button class="btn small" type="submit">Buscar</button></div></form>
+  <nav class="mainnav" id="mainnav"><ul>
 <li><a href="index.html" class="activo">INICIO</a></li>
-<li><a href="index.html#nosotros">NOSOTROS</a></li>
-<li class="has-sub"><a href="index.html#tienda">PRODUCTOS <small>▾</small></a><ul class="sub"><li><a href="index.html#tienda">Todos los productos</a></li><li><a href="index.html?cat=Finos#tienda">Sombreros finos</a></li><li><a href="index.html?cat=Campesinos#tienda">Sombreros campesinos</a></li><li><a href="index.html?cat=Cl%C3%A1sicos#tienda">Sombreros clásicos</a></li><li><a href="index.html?cat=Accesorios#tienda">Accesorios de palma</a></li></ul></li>
-<li><a href="descubre.html#palma">LA PALMA</a></li>
+<li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+<li class="has-sub"><a href="sombreros.html">SOMBREROS <small>▾</small></a><ul class="sub"><li><a href="cubanos.html">Sombreros Cubanos</a></li><li><a href="sombreros.html?cat=Vaqueros">Sombreros Vaqueros</a></li><li><a href="sombreros.html?cat=Ni%C3%B1os">Niños</a></li><li><a href="sombreros.html?cat=Damas">Damas</a></li><li><a href="sombreros.html">Ver todos</a></li></ul></li>
+<li><a href="accesorios.html">ACCESORIOS</a></li>
 <li><a href="descubre.html">DESCUBRE</a></li>
-<li><a href="blog.html">BLOG Y EVENTOS</a></li>
-<li><a href="contacto.html">CONTACTO</a></li>
+<li><a href="contactos.html">CONTÁCTANOS</a></li>
 </ul></nav>
 </header>
 
-<!-- ===== CARRUSEL (cambia las fotos en inicio-) ===== -->
 <div class="hero" id="inicio">
-  <div class="hero-slide active">
-    <img src="inicio-carrusel1.jpg" alt="Sombreros de palma jipijapa">
-    <div class="hero-caption"><h1>Sombreros de palma jipijapa<br>tejidos a mano</h1><a href="#tienda" class="btn">Ver sombreros</a></div>
-  </div>
-  <div class="hero-slide">
-    <img src="inicio-carrusel2.jpg" alt="Artesana tejiendo">
-    <div class="hero-caption"><h1>Una tradición que vive<br>en Álvaro Obregón</h1><a href="descubre.html" class="btn">Descubre la cultura</a></div>
-  </div>
-  <div class="hero-slide">
-    <img src="inicio-carrusel3.jpg" alt="Patrimonio artesanal">
-    <div class="hero-caption"><h1>Cada compra ayuda a<br>rescatar el oficio</h1><a href="descubre.html" class="btn">Descubre</a></div>
-  </div>
+  <div class="hero-slide active"><img src="banner.png" alt="Sombreros que cuentan una historia"><div class="hero-caption"><h1>Sombreros que cuentan<br>una historia</h1><a href="sombreros.html" class="btn">Ver colección</a></div></div>
+  <div class="hero-slide"><img src="inicio-carrusel2.jpg" alt="Palma jipijapa"><div class="hero-caption"><h1>Tejidos a mano en el<br>Ejido Álvaro Obregón</h1><a href="descubre.html" class="btn">Descubre la tradición</a></div></div>
+  <div class="hero-slide"><img src="inicio-carrusel3.jpg" alt="Álvaro Obregón, Tenosique"><div class="hero-caption"><h1>Pedidos personalizados y<br>envíos a todo México</h1><a href="contactos.html" class="btn">Cotiza con nosotros</a></div></div>
   <button class="hero-arrow prev" onclick="changeSlide(-1)" aria-label="Anterior">&#8592;</button>
   <button class="hero-arrow next" onclick="changeSlide(1)" aria-label="Siguiente">&#8594;</button>
-  <div class="hero-nav">
-    <button class="hero-dot active" onclick="goSlide(0)"></button>
-    <button class="hero-dot" onclick="goSlide(1)"></button>
-    <button class="hero-dot" onclick="goSlide(2)"></button>
-  </div>
+  <div class="hero-nav"><button class="hero-dot active" onclick="goSlide(0)"></button><button class="hero-dot" onclick="goSlide(1)"></button><button class="hero-dot" onclick="goSlide(2)"></button></div>
 </div>
-
-<!-- ===== LO MÁS VENDIDO ===== -->
-<section class="section blanco" id="tienda"><div class="container">
-  <div class="center"><img src="logo_centro.png" alt="Logo" class="logo-centro"></div>
-  <h2 class="section-title" id="titulo-top">¡LO MÁS VENDIDO!</h2>
-  <div class="prod-grid" id="grid-top"></div>
-  <div class="ver-todos-wrap" id="ver-todos"><a href="contacto.html" class="ver-todos">¿Buscas otro modelo? Escríbenos</a></div>
-</div></section>
-
-<!-- ===== DESCUBRE ===== -->
-<section class="section claro" id="descubre"><div class="container">
-  <h2 class="section-title">DESCUBRE</h2>
+<div class="trust"><div class="container trust-grid">
+  <div><h4>100% Artesanal</h4><p>Tejido a mano por maestros artesanos</p></div>
+  <div><h4>Paja Jipijapa</h4><p>Material natural y de la más alta calidad</p></div>
+  <div><h4>Elegancia</h4><p>Alta elegancia y mucho estilo</p></div>
+  <div><h4>Garantía de Calidad</h4><p>Satisfacción asegurada en cada compra</p></div>
+</div></div>
+<section class="section blanco"><div class="container">
+  <h2 class="section-title">ENCUENTRA TU ESTILO</h2>
+  <p class="center lead" style="margin:-16px auto 28px">Explora nuestra selección de sombreros para cada ocasión</p>
   <div class="coll-grid">
-    <a href="descubre.html#palma" class="coll-card"><img src="descubre-palma.jpg" alt="La palma jipijapa"><div class="coll-label">La palma jipijapa</div></a>
-    <a href="descubre.html#proceso" class="coll-card"><img src="descubre-proceso.jpg" alt="Del monte al sombrero"><div class="coll-label">Del monte al sombrero</div></a>
-    <a href="descubre.html#patrimonio" class="coll-card"><img src="descubre-rescate.jpg" alt="Patrimonio artesanal"><div class="coll-label">Patrimonio artesanal</div></a>
+    <a href="cubanos.html" class="coll-card"><img src="sombrero_cubano.jpeg" alt="Sombreros Cubanos"><div class="coll-label">Cubanos</div></a>
+    <a href="sombreros.html?cat=Vaqueros" class="coll-card"><img src="sombreros3.jpeg" alt="Sombreros Vaqueros"><div class="coll-label">Vaqueros</div></a>
+    <a href="accesorios.html" class="coll-card"><img src="aretes.jpeg" alt="Accesorios"><div class="coll-label">Accesorios</div></a>
   </div>
 </div></section>
-
-<!-- ===== OTROS PRODUCTOS ===== -->
-<section class="section blanco" id="sec-otros"><div class="container">
-  <h2 class="section-title left">Otros Productos</h2>
-  <div class="prod-grid" id="grid-otros"></div>
+<section class="section claro" id="tienda"><div class="container">
+  <h2 class="section-title">OTROS MODELOS</h2>
+  <p class="center lead" style="margin:-16px auto 28px">Cada pieza, única. Cada sombrero, una obra de arte.</p>
+  <div class="prod-grid" data-grid="featured"></div>
+  <div class="ver-todos-wrap"><a href="sombreros.html" class="ver-todos">Ver toda la colección →</a></div>
 </div></section>
-
-<!-- ===== NOSOTROS ===== -->
-<div class="about-strip" id="nosotros"><div class="about-inner">
-  <div class="about-text">
-    <h2>Los sombreros de jipi de Álvaro Obregón se tejen a mano en Tenosique, Tabasco.</h2>
-    <p>Somos un grupo de artesanas y artesanos tenosiquenses dedicados al tejido de la palma jipijapa, un oficio heredado de generación en generación y que forma parte de la identidad de nuestra comunidad.</p>
-    <p>Cada sombrero es una pieza única: de la palma al telar, del telar a tu cabeza, cuidando cada paso del proceso.</p>
-    <a href="descubre.html" class="btn-link">¡Descubre el patrimonio de nuestra artesanía!</a>
+<section class="section blanco"><div class="container">
+  <h2 class="section-title">COLECCIONES ESPECIALES</h2>
+  <p class="center lead" style="margin:-16px auto 28px">Piezas seleccionadas para quienes aprecian lo auténtico</p>
+  <div class="cols4">
+    <a href="accesorios.html?filtro=aretes" class="coll-card"><img src="aretes.jpeg" alt="Aretes"><div class="coll-label">Aretes</div></a>
+    <a href="accesorios.html?filtro=llaveros" class="coll-card"><img src="llavero1.png" alt="Llaveros"><div class="coll-label">Llaveros</div></a>
+    <a href="accesorios.html?filtro=alajeros" class="coll-card"><img src="alajero.jpeg" alt="Alajeros"><div class="coll-label">Alajeros</div></a>
+    <a href="accesorios.html?filtro=tortilleros" class="coll-card"><img src="tortillero.jpeg" alt="Tortilleros"><div class="coll-label">Tortilleros</div></a>
   </div>
-  <div>
-    <p class="about-p">Somos parte de una cadena artesanal que empieza en la cosecha de la palma, pasa por el secado, el tejido y el acabado, y termina en la puerta de tu casa o negocio.</p>
-    <div class="icon-cats">
-      <div class="icon-cat"><img src="icono-finos.png" alt=""><span>Sombreros finos</span></div>
-      <div class="icon-cat"><img src="icono-campesinos.png" alt=""><span>Sombreros campesinos</span></div>
-      <div class="icon-cat"><img src="icono-accesorios.png" alt=""><span>Accesorios de palma</span></div>
-    </div>
-  </div>
+</div></section>
+<div class="about-strip"><div class="about-inner">
+  <div class="about-text"><div class="eyebrow">Descubre</div><h2>La cultura de la palma jipijapa de Álvaro Obregón</h2>
+    <p>Detrás de cada sombrero hay historia, familia y saber heredado. Conoce la planta, el proceso, las manos que tejen y cómo cuidar tu sombrero.</p>
+    <a href="descubre.html" class="btn">Descubre más</a></div>
+  <div class="about-imgs"><img src="descubre-patrimonio-2.jpg" alt="Álvaro Obregón, Tenosique"></div>
 </div></div>
-
-<!-- ===== PROCESO ===== -->
-<section class="section claro" id="proceso"><div class="container">
-  <h2 class="section-title">DEL MONTE AL SOMBRERO</h2>
-  <div class="steps">
-    <div class="step"><b>01</b><h3>Cosecha</h3><p>Se selecciona y corta la palma tierna respetando el ciclo de la planta.</p></div>
-    <div class="step"><b>02</b><h3>Preparación</h3><p>La hoja se deshebra, se cuece y se seca al sol hasta lograr la fibra flexible.</p></div>
-    <div class="step"><b>03</b><h3>Tejido</h3><p>Se teje la copa y el ala con técnicas heredadas de nuestras abuelas.</p></div>
-    <div class="step"><b>04</b><h3>Acabado</h3><p>Se forma en horma, se remata y se da el toque final a cada pieza.</p></div>
-  </div>
+<section class="section blanco"><div class="container center">
+  <h2 class="section-title">VISÍTANOS</h2>
+  <p>📍 Ejido Álvaro Obregón, Tenosique, Tabasco, México<br>🕒 Lun–Vie 9:00–19:00 · Sáb 9:00–15:00</p>
+  <p><a class="btn" href="contactos.html#mapa">Cómo llegar</a></p>
 </div></section>
-
-<!-- ===== DESCUBRE (lleva a descubre.html) ===== -->
-<div class="about-strip blanco" id="rescate"><div class="about-inner">
-  <div class="about-text">
-    <h2>Descubre el patrimonio de la artesanía de Álvaro Obregón</h2>
-    <p>Detrás de cada sombrero hay historia, familia y saber heredado. Conoce cómo se teje la palma jipijapa, quiénes la trabajan y por qué es importante conservar este oficio.</p>
-    <a href="descubre.html" class="btn">Descubre más</a>
-  </div>
-  <div class="about-imgs"><img src="centro-rescate.jpg" alt="Patrimonio artesanal de Álvaro Obregón"></div>
-</div></div>
-
-<!-- ===== FOOTER (antes includes/footer.php) ===== -->
-<footer class="footer"><div class="container center">
-  <strong>Jipi Obregón</strong> · Sombreros de palma jipijapa y patrimonio artesanal<br>
-  Álvaro Obregón, Tenosique, Tabasco · © 2026
-</div></footer>
-
-
+<footer class="footer"><div class="container fgrid">
+  <div><strong>Jipijapa Ancestral</strong><p>Sombreros y artesanías de palma jipijapa, hechos a mano en el Ejido Álvaro Obregón, Tenosique, Tabasco.</p></div>
+  <div><h4>Explora</h4><a href="nosotros.html">¿Quiénes somos?</a><a href="sombreros.html">Sombreros</a><a href="accesorios.html">Accesorios</a><a href="descubre.html">Descubre</a><a href="contactos.html">Contáctanos</a></div>
+  <div><h4>Contacto</h4><span>📍 Ejido Álvaro Obregón, Tenosique, Tabasco</span><span>📞 +52 934 123 4567</span><span>💬 <a data-wa href="#" target="_blank" rel="noopener">WhatsApp +52 934 110 5505</a></span><span>✉️ ventas@jipijapa-ancestral.com</span></div>
+</div><div class="container center copy">© 2026 Jipijapa Ancestral — Todos los derechos reservados.</div></footer>
 <aside id="drawer" aria-label="Carrito">
   <button class="close" id="close" aria-label="Cerrar">×</button>
   <h3>Tu pedido</h3>

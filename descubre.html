@@ -6,6 +6,14 @@
 <meta name="theme-color" content="#2f4a2c">
 <title>Descubre — Patrimonio artesanal de Álvaro Obregón, Tenosique</title>
 <link rel="stylesheet" href="estilos.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}
+.stat{background:#2f4a2c;color:#fff;border-radius:12px;padding:18px 12px;text-align:center}
+.stat b{display:block;font-size:1.5rem;line-height:1.1}
+.stat small{opacity:.85;font-size:.8rem}
+.nota{font-size:.85rem;opacity:.75;margin-top:14px}
+@media(max-width:800px){.stats{grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body>
 <div class="top-strip"></div>
@@ -80,14 +88,26 @@
   <a class="card" href="accesorios.html?filtro=alajeros"><img class="photo" src="alajero.jpeg" alt=""><h3>Alajeros y tortilleros</h3><p>Cajas y tortilleros tejidos con fibra natural.</p></a>
 </div></div></section>
 
-<section class="section claro"><div class="container about-inner">
-  <div class="prose"><div class="eyebrow">Voces del oficio</div><h2>Las manos que tejen</h2>
-    <p>Detrás de cada pieza hay una persona con nombre e historia. Aquí queremos compartir sus voces: cómo aprendieron, qué les enseñaron sus mayores y qué sueñan para el oficio.</p></div>
-  <div class="voces">
-    <div class="voz"><img src="artesana-1.jpg" alt=""><div><b>Nombre del artesano o artesana</b><small>Años tejiendo · (completa)</small><p>“Escribe aquí su testimonio.”</p></div></div>
-    <div class="voz"><img src="artesana-2.jpg" alt=""><div><b>Nombre del artesano o artesana</b><small>Años tejiendo · (completa)</small><p>“Escribe aquí su testimonio.”</p></div></div>
-    <div class="voz"><img src="artesana-3.jpg" alt=""><div><b>Nombre del artesano o artesana</b><small>Años tejiendo · (completa)</small><p>“Escribe aquí su testimonio.”</p></div></div>
+<!-- ÁREA PROTEGIDA CAÑÓN DEL USUMACINTA -->
+<section class="section claro" id="canon"><div class="container">
+  <div class="prose"><div class="eyebrow">Nuestro territorio</div><h2>Área de Protección de Flora y Fauna Cañón del Usumacinta</h2>
+    <p>Álvaro Obregón forma parte de un territorio de enorme valor natural: el Área de Protección de Flora y Fauna Cañón del Usumacinta, en el municipio de Tenosique. Es un área natural protegida federal, decretada en 2008 y administrada por la Comisión Nacional de Áreas Naturales Protegidas (CONANP).</p>
+    <p>Aquí el río Usumacinta, el más caudaloso de México, se abre paso entre paredes de roca caliza y selva tropical. Es una de las regiones más conservadas del sureste del país y forma parte de la gran selva maya, compartida con Guatemala.</p>
+    <p>La palma jipijapa crece en el sotobosque húmedo de esta selva. Cuidar el área protegida es también cuidar la materia prima del oficio: sin selva sana no hay palma, y sin palma no hay sombrero.</p>
+    <ul class="check">
+      <li>Selva alta y mediana con una gran diversidad de plantas.</li>
+      <li>Hogar de especies como el jaguar, el mono saraguato, la guacamaya roja y el cocodrilo de pantano.</li>
+      <li>Paisajes de cañón, cascadas, cuevas y playas de río.</li>
+      <li>Territorio con presencia de comunidades que viven y cuidan de él.</li>
+    </ul>
   </div>
+  <div class="stats">
+    <div class="stat"><b>2008</b><small>año del decreto</small></div>
+    <div class="stat"><b>≈ 46 mil ha</b><small>de superficie protegida</small></div>
+    <div class="stat"><b>CONANP</b><small>institución que lo administra</small></div>
+    <div class="stat"><b>Tenosique</b><small>municipio, Tabasco</small></div>
+  </div>
+  <p class="nota">Las cifras y datos del área protegida pueden consultarse en las fuentes oficiales de la CONANP.</p>
 </div></section>
 
 <section class="section blanco" id="tallas"><div class="container about-inner">
@@ -110,11 +130,12 @@
   <details><summary>¿Cuánto tarda en tejerse un sombrero?</summary><p>Depende del modelo y de la finura del tejido: puede tomar desde horas hasta días. Los pedidos personalizados tardan de 7 a 15 días hábiles.</p></details>
   <details><summary>¿Por qué cada sombrero es distinto?</summary><p>Porque se teje a mano. La fibra y el pulso de cada artesano dejan pequeñas variaciones que son la firma de la pieza.</p></details>
   <details><summary>¿Es lo mismo jipijapa, jipi y paja toquilla?</summary><p>Son nombres que se usan para la fibra de la misma planta (<em>Carludovica palmata</em>); el nombre cambia según la región.</p></details>
+  <details><summary>¿Qué es el Cañón del Usumacinta?</summary><p>Es un área natural protegida federal en Tenosique, administrada por la CONANP, donde el río Usumacinta atraviesa un cañón rodeado de selva. Es el entorno natural de nuestra comunidad y de la palma jipijapa.</p></details>
   <details><summary>¿Puedo visitar el taller o llevar una plática a mi escuela?</summary><p>Sí. Escríbenos por WhatsApp o desde la página de contacto para coordinar visitas, talleres y pláticas.</p></details>
 </div></div></section>
 
 <section class="section claro"><div class="container center"><h2 class="section-title">CÓMO PUEDES APOYAR</h2>
-  <div class="cards3"><div class="card"><h3>Compra artesanía</h3><p>Llevarte una pieza es reconocer y pagar el trabajo de quienes la tejen.</p></div><div class="card"><h3>Visítanos</h3><p>Conoce el proceso en el Ejido Álvaro Obregón, Tenosique.</p></div><div class="card"><h3>Lleva un taller</h3><p>Invítanos a tu escuela o grupo a compartir la cultura de la palma.</p></div></div>
+  <div class="cards3"><div class="card"><h3>Compra artesanía</h3><p>Llevarte una pieza es reconocer y pagar el trabajo de quienes la tejen.</p></div><div class="card"><h3>Visítanos</h3><p>Conoce el proceso en el Ejido Álvaro Obregón, Tenosique, y el Cañón del Usumacinta, cuidando siempre el entorno.</p></div><div class="card"><h3>Lleva un taller</h3><p>Invítanos a tu escuela o grupo a compartir la cultura de la palma.</p></div></div>
   <p style="margin-top:28px"><a class="btn" href="contactos.html">Contáctanos</a></p></div></section>
 <footer class="footer"><div class="container fgrid">
   <div><strong>Jipijapa Ancestral</strong><p>Sombreros y artesanías de palma jipijapa, hechos a mano en el Ejido Álvaro Obregón, Tenosique, Tabasco.</p></div>

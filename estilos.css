@@ -176,3 +176,106 @@ html,body{overflow-x:hidden}
   .brandbox{margin-left:0}
   .brand-text small{font-size:9px;letter-spacing:.06em}
 }
+
+/* ===== Nuevas secciones (Jipijapa Ancestral) ===== */
+.center{text-align:center}
+.lead{color:var(--texto-suave)}
+.lead.center{margin-left:auto;margin-right:auto}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.chip{display:inline-block;border:1.5px solid var(--paja-oscuro);background:transparent;color:var(--texto);padding:7px 16px;border-radius:999px;font:500 14px system-ui,sans-serif;cursor:pointer;text-decoration:none}
+.chip.on,.chip:hover{background:var(--verde);color:var(--blanco);border-color:var(--verde)}
+.foto{position:relative}
+.tag{position:absolute;top:10px;left:0;background:var(--terracota);color:#fff;padding:4px 10px;border-radius:0 8px 8px 0;font:600 12px system-ui,sans-serif;z-index:2}
+.precio s{color:var(--texto-suave);font-weight:400;font-size:14px}
+.tit{color:inherit;text-decoration:none}
+.trust{background:var(--blanco);border-bottom:1px solid var(--paja-oscuro)}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:26px 20px;text-align:center}
+.trust h4{margin:0 0 4px;color:var(--verde);font:700 16px Palatino,Georgia,serif}
+.trust p{margin:0;color:var(--texto-suave);font-size:14px}
+.cols4{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cols4 .coll-card{aspect-ratio:1/1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;text-align:center}
+.stats b{display:block;font:700 44px Palatino,serif;color:var(--terracota)}
+.stats span{color:var(--texto-suave);font:14px system-ui,sans-serif}
+.crumbs{font:14px system-ui,sans-serif;color:var(--texto-suave);margin:0 0 20px}
+.detail{display:grid;gap:36px}
+@media(min-width:850px){.detail{grid-template-columns:1fr 1fr}}
+.photo.main{aspect-ratio:1/1;object-fit:cover}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent;background:var(--paja-oscuro)}
+.thumbs img.on,.thumbs img:hover{border-color:var(--ocre)}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0;font:15px system-ui,sans-serif}
+.specs dt{font-weight:700;color:var(--verde)}.specs dd{margin:0;color:var(--texto-suave)}
+.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.video-box{margin-top:40px}
+.video-box video{width:100%;max-height:480px;border-radius:14px;background:#000}
+.check{padding-left:0;list-style:none;margin:14px 0 0}
+.check li{padding:6px 0 6px 28px;position:relative}
+.check li::before{content:"✓";position:absolute;left:0;color:var(--verde-claro);font-weight:700}
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--paja);border:1px solid var(--paja-oscuro);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font:600 16px system-ui,sans-serif;color:var(--verde)}
+.faq details p{margin:10px 0 0;color:var(--texto-suave)}
+.tabla{border-collapse:collapse;margin-top:14px;font:15px system-ui,sans-serif;width:100%;max-width:340px}
+.tabla th,.tabla td{padding:10px 14px;border-bottom:1px solid var(--paja-oscuro);text-align:left}
+.tabla th{background:var(--paja)}
+.foto-banda.one{margin-top:0;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.facts .card{text-align:center}
+.tipos .card{text-decoration:none;color:inherit;display:block}
+.tipos .photo{aspect-ratio:4/3;margin-bottom:12px}
+.step{overflow:hidden}
+.step-img{width:calc(100% + 40px);max-width:none;margin:-20px -20px 14px;aspect-ratio:4/3;object-fit:cover;background:var(--paja-oscuro)}
+.voces{display:grid;gap:14px}
+.voz{display:flex;gap:14px;align-items:center;background:var(--blanco);border:1px solid var(--paja-oscuro);border-radius:14px;padding:14px}
+.voz img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none;background:var(--paja-oscuro)}
+.voz b{display:block;color:var(--verde);font-size:15px}.voz small{color:var(--texto-suave)}.voz p{margin:4px 0 0;font-style:italic;font-size:14px}
+.form{display:grid;gap:12px}
+.form label{display:grid;gap:4px;font:600 14px system-ui,sans-serif;color:var(--verde)}
+.form input,.form select,.form textarea{padding:11px 14px;border:1px solid var(--paja-oscuro);border-radius:10px;font:15px system-ui,sans-serif;background:#fff;color:var(--texto);width:100%}
+.mapa{margin:0 0 18px}.mapa iframe{display:block;width:100%;height:420px;border:0;border-radius:16px}
+.fgrid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));text-align:left}
+.footer h4{margin:0 0 8px;color:var(--ocre);font:700 14px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.footer a{color:var(--paja);display:block;text-decoration:none;padding:2px 0}.footer a:hover{color:var(--ocre)}
+.footer span{display:block;padding:2px 0}.footer p{margin:6px 0 0;opacity:.85}
+.footer .copy{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);opacity:.8}
+.menu-btn{display:none;font-size:24px}
+
+/* ===== Móvil: menú hamburguesa ===== */
+@media(max-width:850px){
+  .menu-btn{display:inline-flex}
+  .mainnav{display:none}
+  .mainnav.open{display:block}
+  .mainnav ul{flex-direction:column;overflow:visible;max-width:none}
+  .mainnav>ul>li{flex:none;text-align:left;border-left:0;border-top:1px solid rgba(200,146,58,.35)}
+  .mainnav a{padding:14px 20px}
+  .mainnav .sub{display:block!important;position:static;border-top:0;background:rgba(0,0,0,.18);min-width:0}
+  .mainnav .sub a{padding:11px 34px;font-weight:500}
+  .hm{padding-top:8px;padding-bottom:8px}
+  .hm-left{flex:1;min-width:0}
+  .hm-right{gap:12px}
+  .stats b{font-size:36px}
+  .mapa iframe{height:320px}
+  .voz img{width:60px;height:60px}
+}
+@media(max-width:480px){
+  .section{padding:44px 0}
+  .logo-inst{height:38px}
+  .brand-mark{height:34px}
+  .brand-text b{font-size:14px}
+  .brand-text small{display:none}
+  .prod-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .tarjeta{padding:10px}
+  .tarjeta h3{font-size:15px}
+  .detalle{font-size:13px}
+  .btn.small{padding:9px 10px;font-size:12px}
+  .hero{min-height:200px}
+  .hero-caption h1{font-size:22px}
+  .hero-caption .btn{padding:9px 18px;font-size:13px}
+  .cols4{grid-template-columns:repeat(2,1fr)}
+  .coll-label{font-size:15px}
+}
+
+/* Ajustes finales */
+#drawer{visibility:hidden;transition:transform .25s,visibility .25s}
+#drawer.open{visibility:visible}
+@media(max-width:480px){.hero-arrow{display:none}.hero{min-height:240px}}
